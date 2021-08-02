@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    vertical-align: baseline;
+	font-weight: inherit;
+	font-style: inherit;
+    font-family: "Space Mono";
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  background: hsl(189, 41%, 97%);
+  text-align: right;
+  width: 350px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+body {
+    background: rgb(197, 228, 231);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    background: #fff;
+    display: flex;
+    padding: 2em;
+    min-width: 750px;
+    max-width: 1000px;
+    border-radius: 1em;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    justify-content: space-between;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 24px;
+}
+
+#logo {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+
+#tip {
+    background: hsl(184, 14%, 56%);
+}
+
+input[type="radio"] {
+    display: none;
+	position: absolute;
+	width: 100%;
+    appearance: none;
+}
+
+.radioContainer {
+    max-width: 300px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+label {
+    font-size: 18px;
+}
+
+.radioContainer label {
+    display: block;
+    background: hsl(183, 100%, 15%);
+    padding: 5px 30px;
+    border-radius: 4px;
+    color: #fff;
+    width: 50px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+.container {
+    width: fit-content;
+    margin-bottom: .5em;
+}
+
+.radiobtn {
+    position: relative;
+    display: block;
+    width: fit-content;
+}
+
+#custom {
+    width: 110px;
+    height: 46px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#custom:focus {
+    text-align: right;
+}
+
+.button:hover {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+
+.peopleContainer, .billContainer {
+    position: relative;
+}
+
+.peopleContainer img {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.billContainer img {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
