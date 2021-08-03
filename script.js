@@ -1,30 +1,29 @@
-function app () {
-    let bill, tip, people, tipPerPerson, totalPerPerson;
+function app() {
+    let bill, people, tip, totalPerPerson, tipPerPerson;
+    bill = parseInt(document.querySelector("#bill").value);
 
-    bill = document.querySelector("#bill").value;
+    people = parseInt(document.querySelector("#people").value);
 
-    if(customButton.checked===true) {
-        tip = document.querySelector("#custom").value;
-    } else {
-        tip = document.querySelector('input[name = tip]:checked').value;
+    tip = parseInt(document.querySelector("input[name=tip]:checked").value);
+
+    if (document.querySelector("#tip6").checked === true) {
+        tip = parseInt(customButton.value);
     }
 
-   
-    people = document.querySelector("#people").value;
 
-    console.log(bill, tip, people);
+    console.log("Tip", tip);
+    console.log("Bill", bill);
+    console.log("People", people);
 
+    totalPerPerson = (bill + bill * tip / 100) / people;
+    tipPerPerson = bill * tip / 100 / people
 
-    
-    
+    console.log("Total", totalPerPerson);
+    console.log("tipPerPerson", tipPerPerson);
 }
 
-let customButton;
-customButton = document.querySelector('input[name=custom]');
-
-customButton.onclick = function() {
-    
-    customButton.checked = true;
-    console.log(customButton.checked);
+let customButton = document.querySelector("#custom");
+customButton.onclick = () => {
+    document.querySelector("#tip6").checked = true;
+    app();
 }
-

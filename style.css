@@ -93,7 +93,7 @@ label {
     text-align: center;
     font-size: 24px;
     cursor: pointer;
-    font-weight: bold;
+    
 }
 
 
@@ -127,8 +127,12 @@ label {
 }
 
 .button:hover {
-    background-color: hsl(185, 41%, 84%);
+    background-color: #9DE8DF;
     color: hsl(183, 100%, 15%);
+}
+
+input[type="radio"]:checked + label {
+    background: #26C2AD;
 }
 
 .peopleContainer, .billContainer {
