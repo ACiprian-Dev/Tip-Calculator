@@ -24,9 +24,15 @@ input[type=number] {
   -moz-appearance: textfield;
   background: hsl(189, 41%, 97%);
   text-align: right;
-  width: 350px;
+  width: 340px;
   border-radius: 4px;
   font-weight: bold;
+  padding-right: 10px;
+}
+
+input[type=number]:focus {
+    /* box-shadow: 0 0 6px #9DE8DF; */
+    outline: #9DE8DF 2px solid
 }
 
 body {
@@ -79,8 +85,16 @@ input[type="radio"] {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-label {
-    font-size: 18px;
+label, h3 {
+    font-size: 16px;
+}
+
+span {
+    font-size: 12px;
+}
+
+h2 {
+    font-size: 24px;
 }
 
 .radioContainer label {
@@ -99,14 +113,30 @@ label {
 
 
 @media only screen and (max-width: 768px) {
+
+    body {
+        height: 120vh;
+    }
+
     main {
         flex-direction: column;
+        min-width: initial;
+        padding: 0;
+    }
+    
+    form {
+        align-items: center;
+    }
+
+    .radioContainer {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
+
 .container {
     width: fit-content;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
 }
 
 .radiobtn {
@@ -120,6 +150,7 @@ label {
     height: 46px;
     border-radius: 4px;
     text-align: center;
+    padding-right: 0;
 }
 
 #custom:focus {
@@ -149,4 +180,43 @@ input[type="radio"]:checked + label {
     position: absolute;
     bottom: 10px;
     left: 10px;
+}
+
+.results {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: hsl(183, 100%, 15%);
+    color: #fff;
+    border-radius: 16px;
+}
+
+.amountGroup {
+    padding: 0 1.5em 1.5em 1.5em;
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
+#button {
+    text-align: center;
+    background-color: #26C2AD;
+    cursor: pointer;
+    padding: 10px 60px;
+    margin: 0 2.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:hsl(183, 100%, 15%);
+    border-radius: 6px;
+    margin-bottom: 1em;
+}
+
+#button:hover {
+    background-color: #9DE8DF;
 }
